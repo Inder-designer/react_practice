@@ -1,0 +1,26 @@
+.form_box{
+    margin: 50px auto 50px;
+    padding: 30px;
+    max-width: 600px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+}
+.data_box{
+    max-width: 800px;
+    margin: 0 auto 50px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 20px;
+    text-align: center;
+}
+.data_box .data_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+.data_box .data_item:not(:last-child){
+    border-bottom: 1px solid #dddddd;
+}
+.data_box .data_item h3,.data_box .data_item h4{
+    margin: 0;
+}

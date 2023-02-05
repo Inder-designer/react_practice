@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+.card{
+    background-color: #f6f6f6;
+    width: 18%;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 20px;
+}
+.card img{
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+.card .content{
+    padding: 0 20px;
+}
+.card h4{
+    text-align: left;
+    margin: 20px 0 0;
+}
+.card p{
+    margin: 5px 0 20px;
+}
+.main{
+    text-align: center;
+    padding: 100px 0;
+}
+.main button{
+    margin:  0 10px;
+}
