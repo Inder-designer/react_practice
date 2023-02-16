@@ -2,7 +2,7 @@ import { Button, TextField } from '@mui/material';
 import { Stack } from '@mui/system';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './usestateP.css'
 // import DataItem from './DataItem';
 
@@ -25,6 +25,20 @@ const Usestate_p = () => {
         setData([])
     }
 
+    // useEffect (() => {
+    //     async function getData(){
+    //         const get = await fetch(`https://api.apispreadsheets.com/data/EO5WZViDvfdMofeh`)
+
+    //         const res = await get.json();
+    //         setData(res.data)
+    //         console.log(res);
+    //         // const dataa = res.data
+    //         // dataa.map((e) => {
+    //         //   return console.log(e.Name)
+    //         // })
+    //     }
+    //     getData();
+    // }, [])
     return (
         <div>
             <h1>UseState Project</h1>

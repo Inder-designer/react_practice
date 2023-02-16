@@ -4,6 +4,7 @@ import './App.css';
 import Movie from './components/movie/Movie';
 import UsestateP from './components/UseState_p/Usestate_p';
 import UseEffectH from './components/useEffect_H/UseEffect_H';
+import { Link } from 'react-router-dom';
 
 function App() {
   
