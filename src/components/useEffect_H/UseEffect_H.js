@@ -1,4 +1,5 @@
 import { Button, TextField } from '@mui/material'
+import DeleteIcon from '@mui/icons-material/Delete';
 import { Stack } from '@mui/system'
 import React from 'react'
 import { useEffect, useState } from 'react'
@@ -23,16 +24,6 @@ const UseEffect_H = () => {
     }
     getData();
   }, [setData])
-   
-  // useEffect(() => {
-  //   fetch(`https://api.apispreadsheets.com/data/EO5WZViDvfdMofeh`)
-   
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     setData([...data, { Name, Number }]);
-  //   })
-  // },)
-
   const [Name, setName] = useState("");
   const [Number, setEmail] = useState("");
   const addData = async() => {
@@ -40,11 +31,18 @@ const UseEffect_H = () => {
     method: "POST",
     body: JSON.stringify({"data": {"Name":Name,"Email":"","Number":Number,"Password":""}})
   });
-
     setData([...data, { Name, Number }])
     setName("")
     setEmail("")
 };
+  const removeItems = async() => {
+  let deletData = await fetch("https://api.apispreadsheets.com/data/EO5WZViDvfdMofeh/?query=delete from EO5WZViDvfdMofeh where Name='Bhupinder' ").then(res=>{
+    
+  })
+  let removeData = data;
+  removeData.splice(Name, 1);
+  setData([...removeData])
+}
 
 
 
@@ -67,6 +65,7 @@ const UseEffect_H = () => {
                   <td>{e.Email}</td>
                   <td>{e.Number}</td>
                   <td>{e.Password}</td>
+                  <td><Button variant="outlined" color="error" onClick={() => removeItems(index)} ><DeleteIcon /></Button></td>
                 </tr>
             )
           })

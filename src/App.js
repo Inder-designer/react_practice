@@ -13,7 +13,7 @@ function App() {
       {/* <Header name="Bhupinder" age="20" /> */}
       <Movie/>
       <UsestateP/>
-      <UseEffectH/>
+      {/* <UseEffectH/> */}
     </div>
   );
 }
