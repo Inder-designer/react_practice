@@ -35,7 +35,12 @@ const UseEffect_H = () => {
 
   const [Name, setName] = useState("");
   const [Number, setEmail] = useState("");
-  const addData = () => {
+  const addData = async() => {
+  let abc =  await fetch("https://api.apispreadsheets.com/data/EO5WZViDvfdMofeh/", {
+    method: "POST",
+    body: JSON.stringify({"data": {"Name":Name,"Email":"","Number":Number,"Password":""}})
+  });
+
     setData([...data, { Name, Number }])
     setName("")
     setEmail("")
